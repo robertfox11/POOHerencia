@@ -1,7 +1,7 @@
 package org.robert.pooherencia;
 
 //alumno hereda de persona con extends
-public class Alumno extends Persona{
+public class Alumno extends Persona {
     /*propios atributos*/
     private String instituto;
     private double notasMates;
@@ -64,5 +64,19 @@ public class Alumno extends Persona{
 
     public void setNotasHistoria(double notasHistoria) {
         this.notasHistoria = notasHistoria;
+    }
+
+    /**
+     * Sobre escritura en el metodo
+     */
+    @Override
+    public String saludar() {
+        String saludar = super.saludar();
+        return saludar + "soy alumno y mi nombre es " + getNombre();
+    }
+
+    public double calcularPromedio() {
+        System.out.println("Calcular promedio "+ this.getClass().getCanonicalName());
+        return (notasHistoria + notasLengua + notasMates)/3;
     }
 }

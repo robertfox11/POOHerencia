@@ -1,7 +1,7 @@
 package org.robert.pooherencia;
 
 //persona hera de object
-public class Persona {
+public abstract class Persona {
     //con protected podemos acceder de forma directa
     private String nombre;
     private String apellido;
@@ -9,7 +9,7 @@ public class Persona {
     private String email;
 
     //constructor
-    public Persona(){
+    public Persona() {
         System.out.println("hola mundo Persona");
     }
 
@@ -55,4 +55,9 @@ public class Persona {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String saludar() {
+        return "Hola que tal";
+    }
+
 }
