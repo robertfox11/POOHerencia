@@ -60,4 +60,14 @@ public abstract class Persona {
         return "Hola que tal";
     }
 
+    /*ToString override*/
+
+    @Override
+    public String toString() {
+        return "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", email='" + email + '\'' +
+                ", saludo=" + this.saludar();
+    }
 }

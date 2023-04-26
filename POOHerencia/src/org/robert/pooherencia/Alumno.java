@@ -74,9 +74,17 @@ public class Alumno extends Persona {
         String saludar = super.saludar();
         return saludar + "soy alumno y mi nombre es " + getNombre();
     }
-
     public double calcularPromedio() {
-        System.out.println("Calcular promedio "+ this.getClass().getCanonicalName());
+        System.out.println("Calcular promedio "+ Alumno.class.getCanonicalName());
         return (notasHistoria + notasLengua + notasMates)/3;
+    }
+    /**Sobre escribir metodo toString*/
+    @Override
+    public String toString() {
+        return super.toString()+
+                "\ninstituto='" + instituto + '\'' +
+                ", notasMates=" + notasMates +
+                ", notasLengua=" + notasLengua +
+                ", notasHistoria=" + notasHistoria +", promedio= " +this.calcularPromedio();
     }
 }
