@@ -70,4 +70,6 @@ public abstract class Persona {
                 ", email='" + email + '\'' +
                 ", saludo=" + this.saludar();
     }
+
+    /**Modificadores Clase Final no se puede heredar de esa clase*/
 }

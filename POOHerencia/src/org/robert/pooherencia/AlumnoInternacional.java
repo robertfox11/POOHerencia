@@ -1,7 +1,7 @@
 package org.robert.pooherencia;
 
 /**Extiende de alumno que hereda de persona */
-public class AlumnoInternacional extends Alumno{
+public final class AlumnoInternacional extends Alumno{
     private String pais;
     private double notaIdiomas;
 
